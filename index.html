@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animation Effects</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="description">
+        <div class="book-info">
+            <h1>Oraux ENS 2023-2024 : <br> Recueil d'exercices et solutions complètes</h1>
+            <h2>Mathématiques - Filière MP</h2>
+            <h3>Les auteurs</h3>
+            <p style="color: #429ED9">ETTOUSY Badr, SABIR Ilyass, ZINE Akram</p>
+            <p>Ce document constitue la première étape d’un projet plus vaste. Son objectif est de rendre l’information accessible à tous et de donner des chances équitables aux candidats des concours post-prépa, en particulier à ceux qui rencontrent des difficultés financières. Si vous souhaitez contribuer à notre projet (nous prévoyons de développer d'autres documents, des vidéos et des sessions de travail dès que possible), sachez que nous ne sommes pour l’instant que trois personnes, unies par une passion commune pour les mathématiques. Nous sommes toujours à la recherche de nouveaux collaborateurs.</p>
+            <p>Pour participer à ce projet, merci de remplir le formulaire : <br>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeJewGmeZWZ7ZM71LzwxJfOaR5vrqtRzdRqNtybedyCqSPCbw/viewform?usp=sf_link" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968528.png" alt="Google Form" style="width: 3rem;">
+                </a>
+            </p>
+            <p>Si vous appréciez cette initiative et souhaitez nous encourager, vous pouvez nous soutenir : <br>
+                <a href=https://paypal.me/sabirilyass?country.x=FR&locale.x=fr_FR" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal" style="width: 6rem;">
+                </a>
+            </p>
+        </div>
+    </div>
+    <div class="container">
+        <a href="Data/oraux_ENS.pdf" target="_blank">
+            <img src="Data/page1.jpg" alt="Image Description" class="center-image">
+        </a>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let container = document.querySelector('.container');
+            for (let j = 0; j < 4; j++) {
+                let loader = document.createElement('div');
+                loader.classList.add('loader');
+                loader.style.setProperty('--j', j);
+                for (let i = 1; i <= 20; i++) {
+                    let span = document.createElement('span');
+                    span.style.setProperty('--i', i);
+                    loader.appendChild(span);
+                }
+                container.appendChild(loader);
+            }
+        });
+    </script>
+</body>
+</html>
